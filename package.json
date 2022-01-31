@@ -11,6 +11,7 @@
   "devDependencies": {
     "eslint": "^8.8.0",
     "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.25.4",
     "eslint-plugin-jest": "^26.0.0",
     "jest": "^27.4.7",
     "serverless-deployment-bucket": "^1.5.1"
