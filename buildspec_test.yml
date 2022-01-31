@@ -6,6 +6,6 @@ phases:
       - npm install
   build:
     commands:
-      - npm run test
+      - npm run test 
       - npm run coverage
-      - npm run lint-fix
+      - npm run lint
