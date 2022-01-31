@@ -1,3 +1,4 @@
+// %%VARIABLES%% should be replaced during deployment
 exports.hello = async (event) => ({
   statusCode: 200,
   body: JSON.stringify(
