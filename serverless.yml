@@ -1,0 +1,21 @@
+service: serverless-api
+
+frameworkVersion: '3'
+
+plugins:
+  - serverless-deployment-bucket
+
+provider:
+  name: aws
+  runtime: nodejs14.x
+  deploymentBucket:
+    name: ${opt:stage}-${env:country}-yuan-deployments
+    blockPublicAccess: true
+
+functions:
+  hello:
+    handler: ./src/serverless-api.hello
+    events:
+      - httpApi:
+          path: /
+          method: get
