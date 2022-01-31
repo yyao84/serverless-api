@@ -9,7 +9,7 @@ provider:
   name: aws
   runtime: nodejs14.x
   deploymentBucket:
-    name: ${opt:stage}-${env:country}-yuan-deployments
+    name: ${opt:stage}-${env:COUNTRY}-${opt:region}-yuan-deployments
     blockPublicAccess: true
 
 functions:
