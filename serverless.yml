@@ -6,6 +6,12 @@ plugins:
   - serverless-deployment-bucket
   - serverless-plugin-canary-deployments
 
+params:
+  dev:
+    deployType: AllAtOnce
+  master:
+    deployType: Linear10PercentEvery1Minute
+
 provider:
   name: aws
   runtime: nodejs14.x
@@ -31,5 +37,5 @@ functions:
       # Linear10PercentEvery3Minute
       # Linear10PercentEvery10Minute
       # AllAtOnce
-      type: Linear10PercentEvery1Minute
+      type: ${param:deployType}
       alias: live
