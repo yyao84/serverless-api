@@ -4,6 +4,7 @@ frameworkVersion: '3'
 
 plugins:
   - serverless-deployment-bucket
+  - serverless-plugin-canary-deployments
 
 provider:
   name: aws
@@ -19,3 +20,16 @@ functions:
       - httpApi:
           path: /
           method: get
+    deploymentSettings:
+      # CodeDeploy Options:
+      # Canary10Percent5Minutes
+      # Canary10Percent10Minutes
+      # Canary10Percent15Minutes
+      # Canary10Percent30Minutes
+      # Linear10PercentEvery1Minute
+      # Linear10PercentEvery2Minute
+      # Linear10PercentEvery3Minute
+      # Linear10PercentEvery10Minute
+      # AllAtOnce
+      type: Linear10PercentEvery1Minute
+      alias: live

@@ -4,3 +4,10 @@ jspm_packages
 
 # Serverless directories
 .serverless
+
+# Coverage
+coverage
+*.lcov
+
+# NPM lock
+package-lock.json
