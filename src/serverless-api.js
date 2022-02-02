@@ -5,7 +5,7 @@ exports.hello = async (event) => {
     statusCode: 200,
     body: JSON.stringify(
       {
-        apiVersion: '0.2',
+        apiVersion: '0.3',
         message: `API v1 - %%COUNTRY%%@%%BRANCH%% at ${process.env.AWS_REGION}`,
         buildDate: '%%BUILDDATE%%',
       },
