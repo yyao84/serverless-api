@@ -10,7 +10,7 @@ exports.hello = async (event) => {
         buildDate: '%%BUILDDATE%%',
       },
       null,
-      2,
+      2
     ),
   };
 };
